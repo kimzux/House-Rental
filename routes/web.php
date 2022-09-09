@@ -22,3 +22,6 @@ Route::get('/dashboard', function () {
 Route::get('/dashboard', function () {
     return view('pages.dashboard');
 });
+Route::get('/home', function () {
+    return view('tenant.land-pages.index');
+});
