@@ -28,7 +28,7 @@
 
           <div class="small-box bg-info">
             <div class="inner">
-              <h3>150</h3>
+              <h3><?= $landlord?? '' ?></h3>
 
               <p>Landlords</p>
             </div>
@@ -43,7 +43,7 @@
 
           <div class="small-box bg-success">
             <div class="inner">
-              <h3>53<sup style="font-size: 20px">%</sup></h3>
+              <h3><?= $tenant?? '' ?></h3>
 
               <p>Tenants</p>
             </div>

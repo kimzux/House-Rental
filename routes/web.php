@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\LandlordController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -29,3 +30,5 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::resource('landlord', LandlordController::class);
+Route::get('/landlord-dashboard', [App\Http\Controllers\LandlordController::class, 'landlord_dashboard'])->middleware('role:landlord');

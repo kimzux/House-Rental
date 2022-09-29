@@ -46,20 +46,39 @@
                 <small class="text-danger">{{$message}}</small>
                 @enderror
         <div class="input-group mb-3">
-          <input type="password" class="form-control" placeholder="Retype password">
+          <input type="password" class="form-control" placeholder="Retype password"  name="password_confirmation">
           <div class="input-group-append">
             <div class="input-group-text">
               <span class="fas fa-lock"></span>
             </div>
           </div>
         </div>
+        @error('phone_number')
+                <small class="text-danger">{{$message}}</small>
+                @enderror
+        <div class="input-group mb-3">
+          <input type="number" class="form-control" placeholder="Phone number" name="phone_number">
+          <div class="input-group-append">
+            <div class="input-group-text">
+              <span class="fas fa-phone"></span>
+            </div>
+          </div>
+        </div>
         <div class="row">
           <div class="col-8">
+            <div style="display:flex; justify-content:space-between" >
             <div class="icheck-primary">
-              <input type="checkbox" id="agreeTerms" name="terms" value="agree">
+              <input type="radio" id="agreeTerms" name="status" value="2">
               <label for="agreeTerms">
-               I agree to the <a href="#">terms</a>
+             landlord
               </label>
+              </div>
+              <div class="icheck-primary">
+              <input type="radio" id="agreeTerms2" name="status" value="3">
+              <label for="agreeTerms2">
+              tenant
+              </label>
+              </div>
             </div>
           </div>
           <!-- /.col -->
@@ -70,19 +89,8 @@
         </div>
       </form>
 
-      <!-- <div class="social-auth-links text-center">
-        <p>- OR -</p>
-        <a href="#" class="btn btn-block btn-primary">
-          <i class="fab fa-facebook mr-2"></i>
-          Sign up using Facebook
-        </a>
-        <a href="#" class="btn btn-block btn-danger">
-          <i class="fab fa-google-plus mr-2"></i>
-          Sign up using Google+
-        </a>
-      </div> -->
 
-      <a href="login.html" class="text-center">I already have a membership</a>
+      <a href="{{route('login')}}" class="text-center">I already have a membership</a>
     </div>
     <!-- /.form-box -->
   </div><!-- /.card -->
