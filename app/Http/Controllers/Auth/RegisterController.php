@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Auth;
 use App\Http\Controllers\Controller;
 use App\Providers\RouteServiceProvider;
 use App\Models\User;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Foundation\Auth\RegistersUsers;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
@@ -29,7 +30,25 @@ class RegisterController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = RouteServiceProvider::HOME;
+    public function redirectTo()
+    {
+        $role = Auth::user()->role_id;
+        switch ($role) {
+            case 1:
+                return '/home';
+                break;
+            case 2:
+                return '/landlord-dashboard';
+                break;
+            case 3:
+                return '/tenant-dashboard';
+                break;
+
+            default:
+                return '/';
+                break;
+        }
+    }
 
     /**
      * Create a new controller instance.
@@ -51,9 +70,15 @@ class RegisterController extends Controller
     {
         return Validator::make($data, [
             'name' => ['required', 'string', 'max:255'],
-            'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
+            'email' => [
+                'required',
+                'string',
+                'email',
+                'max:255',
+                'unique:users',
+            ],
             'password' => ['required', 'string', 'min:8', 'confirmed'],
-            'phone_number' => ['required', 'numeric','digits:10'],
+            'phone_number' => ['required', 'numeric', 'digits:10'],
         ]);
     }
 

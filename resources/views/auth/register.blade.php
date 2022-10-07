@@ -34,6 +34,18 @@
         @error('email')
                 <small class="text-danger">{{$message}}</small>
                 @enderror
+              
+        <div class="input-group mb-3">
+          <input type="number" class="form-control" placeholder="Phone number" name="phone_number">
+          <div class="input-group-append">
+            <div class="input-group-text">
+              <span class="fas fa-phone"></span>
+            </div>
+          </div>
+        </div>
+        @error('phone_number')
+                <small class="text-danger">{{$message}}</small>
+                @enderror
         <div class="input-group mb-3">
           <input type="password" class="form-control" placeholder="Password" name="password">
           <div class="input-group-append">
@@ -42,7 +54,7 @@
             </div>
           </div>
         </div>
-        @error('password')
+         @error('password')
                 <small class="text-danger">{{$message}}</small>
                 @enderror
         <div class="input-group mb-3">
@@ -50,17 +62,6 @@
           <div class="input-group-append">
             <div class="input-group-text">
               <span class="fas fa-lock"></span>
-            </div>
-          </div>
-        </div>
-        @error('phone_number')
-                <small class="text-danger">{{$message}}</small>
-                @enderror
-        <div class="input-group mb-3">
-          <input type="number" class="form-control" placeholder="Phone number" name="phone_number">
-          <div class="input-group-append">
-            <div class="input-group-text">
-              <span class="fas fa-phone"></span>
             </div>
           </div>
         </div>

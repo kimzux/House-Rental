@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.landlord-app')
 
 @section('content')
 <!-- dashboard -->
@@ -24,26 +24,12 @@
     <div class="container-fluid">
 
       <div class="row">
-        <div class="col-lg-3 col-6">
-
-          <div class="small-box bg-info">
-            <div class="inner">
-              <h3><?= $landlord?? '' ?></h3>
-
-              <p>Landlords</p>
-            </div>
-            <div class="icon">
-              <i class=" fas fa-users"></i>
-            </div>
-            <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
-          </div>
-        </div>
-
+    
         <div class="col-lg-3 col-6">
 
           <div class="small-box bg-success">
             <div class="inner">
-              <h3><?= $tenant?? '' ?></h3>
+              <h3>40</h3>
 
               <p>Tenants</p>
             </div>

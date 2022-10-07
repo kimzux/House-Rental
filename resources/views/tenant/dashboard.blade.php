@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.tenant-app')
 
 @section('content')
 <!-- dashboard -->
@@ -8,7 +8,7 @@
     <div class="container-fluid">
       <div class="row mb-2">
         <div class="col-sm-6">
-          <h1 class="m-0">Dashboard</h1>
+          <h1 class="m-0">Tenant-Dashboard</h1>
         </div>
         <div class="col-sm-6">
           <ol class="breadcrumb float-sm-right">
@@ -24,11 +24,11 @@
     <div class="container-fluid">
 
       <div class="row">
-        <div class="col-lg-3 col-6">
+        <!-- <div class="col-lg-3 col-6">
 
           <div class="small-box bg-info">
             <div class="inner">
-              <h3><?= $landlord?? '' ?></h3>
+              <h3>2</h3>
 
               <p>Landlords</p>
             </div>
@@ -37,13 +37,13 @@
             </div>
             <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
           </div>
-        </div>
+        </div> -->
 
-        <div class="col-lg-3 col-6">
+        <!-- <div class="col-lg-3 col-6">
 
           <div class="small-box bg-success">
             <div class="inner">
-              <h3><?= $tenant?? '' ?></h3>
+              <h3></h3>
 
               <p>Tenants</p>
             </div>
@@ -52,7 +52,7 @@
             </div>
             <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
           </div>
-        </div>
+        </div> -->
 
         <div class="col-lg-3 col-6">
 

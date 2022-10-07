@@ -94,16 +94,7 @@
               </p>
             </a>
           </li>
-          <li class="nav-item">
-            <a href="{{route('landlord.index')}}" class="nav-link">
-              <i class="nav-icon fas fa-users"></i>
-              <p>
-              Landlords
-                <span class="badge badge-info right">6</span>
-              </p>
-            </a>
-            
-          </li>
+
           <li class="nav-item">
             <a href="{{route('tenant.index')}}" class="nav-link">
               <i class="nav-icon fas fa-users"></i>
