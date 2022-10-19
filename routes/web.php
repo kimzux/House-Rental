@@ -4,6 +4,7 @@ use App\Http\Controllers\Admin\AdminTenantController;
 use App\Http\Controllers\Landlord\LandlordController;
 use App\Http\Controllers\Landlord\landlordTenantController;
 use App\Http\Controllers\TenantController;
+use App\Http\Controllers\House\HouseController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -36,5 +37,6 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 Route::resource('landlord', AdminLandlordController::class);
 Route::resource('tenant', AdminTenantController::class);
 Route::resource('landlord-tenant', landlordTenantController::class);
+Route::resource('landlord-house', HouseController::class);
 Route::get('/landlord-dashboard', [App\Http\Controllers\Landlord\LandlordController::class, 'index'])->name('landlord-dashboard');
 Route::get('/tenant-dashboard', [App\Http\Controllers\TenantController::class, 'index'])->name('tenant-dashboard');
