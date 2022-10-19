@@ -87,7 +87,7 @@
       <nav class="mt-2">
         <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
           <li class="nav-item">
-            <a href="{{ route('home') }}" class="nav-link">
+            <a href="{{ route('landlord-dashboard') }}" class="nav-link">
               <i class="nav-icon fas fa-home"></i>
               <p>
                 Dashboard
@@ -96,11 +96,11 @@
           </li>
 
           <li class="nav-item">
-            <a href="{{route('tenant.index')}}" class="nav-link">
+            <a href="{{route('landlord-tenant.index')}}" class="nav-link">
               <i class="nav-icon fas fa-users"></i>
               <p>
             Tenants
-                <span class="badge badge-info right">6</span>
+                <!-- <span class="badge badge-info right">6</span> -->
               </p>
             </a>
             
