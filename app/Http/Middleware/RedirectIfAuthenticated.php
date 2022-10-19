@@ -27,10 +27,11 @@ class RedirectIfAuthenticated
     //         }
     //     }
 
-    //     return $next($request);
+        
     // }
     public function handle($request, Closure $next, $guard = null)
     {
+        return $next($request);
         if (Auth::guard($guard)->check()) {
             $role = Auth::user()->role_id;
 
@@ -50,6 +51,6 @@ class RedirectIfAuthenticated
                     break;
             }
         }
-        return $next($request);
+       
     }
 }
